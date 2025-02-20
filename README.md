@@ -16,38 +16,38 @@ This repository contains a shell script (`setup.sh`) to automate the setup of yo
 
 ## **How to Use**
 
-### **Step 1: Download the Script**
-You can download the `setup.sh` script using either `curl` or `wget`.
+### **Option 1: Run the Script Directly (One-Liner)**
+
+You can run the script directly from the internet without downloading it first.
 
 #### Using `curl`:
 ```bash
-curl -O https://raw.githubusercontent.com/yourusername/your-repo/main/setup.sh
+curl -sSL https://raw.githubusercontent.com/nauthnael/Nexus-Testnet2-Environment-Setup/main/setup.sh | sudo bash
 ```
 
 #### Using `wget`:
 ```bash
-wget https://raw.githubusercontent.com/yourusername/your-repo/main/setup.sh
+wget -qO- https://raw.githubusercontent.com/nauthnael/Nexus-Testnet2-Environment-Setup/main/setup.sh | sudo bash
 ```
 
-Replace `yourusername` and `your-repo` with your actual GitHub username and repository name.
+### **Option 2: Download and Run Manually**
 
-### **Step 2: Make the Script Executable**
-After downloading the script, make it executable by running:
-```bash
-chmod +x setup.sh
-```
+1. **Download the script**:
+   ```bash
+   curl -O https://raw.githubusercontent.com/nauthnael/Nexus-Testnet2-Environment-Setup/main/setup.sh
+   # or
+   wget https://raw.githubusercontent.com/nauthnael/Nexus-Testnet2-Environment-Setup/main/setup.sh
+   ```
 
-### **Step 3: Run the Script**
-Execute the script with root privileges:
-```bash
-sudo ./setup.sh
-```
+2. **Make it executable**:
+   ```bash
+   chmod +x setup.sh
+   ```
 
-The script will:
-1. Update the system and install necessary packages.
-2. Detect your CPU architecture and download the appropriate `protoc` binary.
-3. Install Rust and load its environment.
-4. Install the Nexus CLI.
+3. **Run the script**:
+   ```bash
+   sudo ./setup.sh
+   ```
 
 ### **Step 4: Verify Installation**
 - To verify that `protoc` is installed correctly, run:
@@ -91,19 +91,18 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ### **Example Commands**
 Here’s a quick summary of the commands you’ll use:
 
-1. **Download the script**:
+1. **Run the script directly**:
    ```bash
-   curl -O https://raw.githubusercontent.com/yourusername/your-repo/main/setup.sh
+   curl -sSL https://raw.githubusercontent.com/nauthnael/Nexus-Testnet2-Environment-Setup/main/setup.sh | sudo bash
    # or
-   wget https://raw.githubusercontent.com/yourusername/your-repo/main/setup.sh
+   wget -qO- https://raw.githubusercontent.com/nauthnael/Nexus-Testnet2-Environment-Setup/main/setup.sh | sudo bash
    ```
 
-2. **Make it executable**:
+2. **Download and run manually**:
    ```bash
+   curl -O https://raw.githubusercontent.com/nauthnael/Nexus-Testnet2-Environment-Setup/main/setup.sh
    chmod +x setup.sh
-   ```
-
-3. **Run the script**:
-   ```bash
    sudo ./setup.sh
    ```
+
+---
